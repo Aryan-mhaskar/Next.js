@@ -4,6 +4,7 @@ const nextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   reactCompiler: true,
+
   turbopack: {
     rules: {
       "*.css": {
@@ -12,6 +13,14 @@ const nextConfig = {
       },
     },
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        
+      },
+    ],
+  },
 };
-
 export default nextConfig;
